@@ -1,3 +1,6 @@
+# key-to-toml.py - Sunday, November 7, 2021
+""" Convert JSON secrets to TOML """
+
 import toml
 
 output_file = ".streamlit/secrets.toml"
