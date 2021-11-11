@@ -129,5 +129,11 @@ dmypy.json
 .pyre/
 
 # Secrets
+.streamlit/
 secrets.toml
 firestore-key.json
+
+# Archives & Backups
+*.tar.*
+*txz
+*~*
