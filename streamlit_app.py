@@ -6,22 +6,13 @@ from google.cloud import firestore
 from google.oauth2 import service_account
 import json
 
-"""
-# Replace:
-db = firestore.Client.from_service_account_json("firestore-key.json")
-# With:
-import json
 key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
-db = firestore.Client(credentials=creds, project="streamlit-reddit")
-"""
-
-key_dict = json.loads(st.secrets["textkey"])
-creds = service_account.Credentials.from_service_account_info(key_dict)
+# This line doesn't work
 # db = firestore.Client(credentials=creds, project="streamlit-reddit")
+# This line works
 db = firestore.Client(credentials=creds)
 
-# db = firestore.Client.from_service_account_json("firestore-key.json")
 
 # Streamlit widgets to let a user create a new post
 title = st.text_input("Post title")
